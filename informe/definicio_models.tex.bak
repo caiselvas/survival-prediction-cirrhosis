@@ -1,0 +1,39 @@
+\section{Definició de models}
+
+\subsection{K-Nearest Neighbors (KNN)}
+
+\subsubsection{Motivació}
+
+\subsubsection{Mètriques}
+
+\subsubsection{Hiperparàmetres}
+
+\subsubsection{Entrenament}
+
+\subsubsection{Resultats}
+
+%--------------------------------------------------------------------------
+\subsection{Arbre de decisió}
+
+\subsubsection{Motivació}
+
+\subsubsection{Mètriques}
+
+\subsubsection{Hiperparàmetres}
+
+\subsubsection{Entrenament}
+
+\subsubsection{Resultats}
+
+%--------------------------------------------------------------------------
+\subsection{Support Vector Machine (SVM)}
+
+\subsubsection{Motivació}
+
+\subsubsection{Mètriques}
+
+\subsubsection{Hiperparàmetres}
+
+\subsubsection{Entrenament}
+
+\subsubsection{Resultats}
