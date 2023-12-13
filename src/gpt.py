@@ -2,7 +2,7 @@
 
 # Carga del dataset
 import pandas as pd
-file_path = '../assets/data/cirrhosis.csv'
+file_path = '../assets/data/preprocessed_cirrhosis.csv'
 data = pd.read_csv(file_path)
 
 # Análisis Exploratorio Inicial
@@ -13,7 +13,7 @@ data.nunique()
 
 # División del dataset en conjuntos de entrenamiento y prueba
 from sklearn.model_selection import train_test_split
-X = data.drop('Stage', axis=1)
+X = data.drop('Status', axis=1)
 y = data['Stage']
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42)
 

@@ -1,0 +1,59 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{fancyhdr} % Required for making headers and footers
+\usepackage[hidelinks]{hyperref} % Required for making hyperlinks
+\usepackage{float} % To include de [H] option in tables
+\usepackage[nottoc, numbib]{tocbibind} % Show bibliography in table of contents and enumerate it properly
+\usepackage[
+  top=2cm,
+  bottom=2cm,
+  left=3.25cm,
+  right=3.25cm,
+  headheight=50pt, % as per the warning by fancyhdr
+  includehead,includefoot,
+  heightrounded, % to avoid spurious underfull messages
+]{geometry}
+\usepackage[catalan]{babel} % Select language
+\setlength{\parindent}{0pt} % Change the identation in new paragraphs (default = 20pt)
+
+\begin{document}
+
+\include{cover}
+\setcounter{page}{2}
+\setcounter{secnumdepth}{4} % To numerate \paragraph{} depth
+\setcounter{tocdepth}{4} % To include \paragraph{} depth in the table of contents
+
+\rhead{\includegraphics[scale=0.25]{Logos UPC/Logo UPC BCNTech Negre Transparent.png}}
+\lhead{\textbf{Grau en Intel·ligència Artificial\\[3pt]IAA - Informe Pràctica}\vspace{5pt}}
+\pagestyle{fancy}
+
+\include{abstract}
+
+\tableofcontents
+
+\include{introduction}
+
+\include{entrega}
+
+\include{analisis_i_preprocessing}
+
+\include{preparacio_variables}
+
+\include{definicio_models}
+
+\include{seleccio_model}
+
+\include{model_card}
+
+\include{bonus_1}
+
+\include{bonus_2}
+
+\include{conclusions}
+
+\bibliographystyle{unsrt}
+\bibliography{bibliography}
+
+
+\end{document}
+
