@@ -15,7 +15,7 @@ Addicionalment, per una millor comprensió de la variable \textit{Status}, s'ha 
 Una vegada realitzats aquests canvis, es pot començar a treballar amb el dataset correctament.
 
 \subsection{Anàlisis estadístic de les variables i estudi de balanceig de classes}
-El primer que s'ha fet per entendre el dataset i poder treballar amb ell és realitzar un anàlisis estadístic de cada una de les variables que el formen. A més, per les variables numèriques podem analitzar la distribuci
+El primer que s'ha fet per entendre el dataset i poder treballar amb ell és realitzar un anàlisis estadístic de cada una de les variables que el formen. A més, per les variables numèriques podem analitzar la distribució que segueixen mitjançant un histograma, mentre que per les categòriques podem realitzar countplots per veure la distribució entre les seves classes i com de balancejades estan.
 
 \subsubsection{Variables numèriques}
 En les taules \ref{tab:num-stats-1} i \ref{tab:num-stats-2} es poden veure estadístiques sobre totes les variables numèriques del dataset (obtingudes mitjançant la comanda \texttt{data.describe()} de la llibreria \texttt{pandas}).
