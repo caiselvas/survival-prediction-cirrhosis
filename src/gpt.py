@@ -120,4 +120,34 @@ plt.ylabel('Varianza explicada acumulativa')
 plt.title('Gráfico de Varianza Explicada por PCA')
 plt.show()
 
+def keep_classes_in_partitions(train: pd.DataFrame, test: pd.DataFrame):
+	"""
+	Certifica que tant el conjunt d'entrenament com el de prova continguin almenys un exemple de cada classe de totes les variables categòriques (excepte 'ID').
+	En cas que no hi hagi cap exemple d'una classe en un dels dos conjunts, es mou una mostra del conjunt que en tingui a l'altre.
+	Això evita problemes en cas que es faci encoding.
+	"""
+	categorical_cols = data.select_dtypes(include=['object', 'category']).columns.tolist()
+	categorical_cols.remove('ID')  # Excluir 'ID'
+
+	# Comprovar que tant el conjunt d'entrenament com el de prova continguin almenys un exemple de cada classe
+	for col in categorical_cols:
+		train_classes = train[col].notna().unique()
+		test_classes = test[col].notna().unique()
+
+		missing_classes_test = set(train_classes) - set(test_classes)
+		missing_classes_train = set(test_classes) - set(train_classes)
+		
+		for missing_class in missing_classes_test:
+			print(f"Missing class '{missing_class}' in test set for column '{col}'")
+			# Moure una mostra amb la classe faltant del conjunt de entrenament al de prova
+			missing_class_index = train[train[col] == missing_class].index[0]
+			test = pd.concat([test, train.loc[[missing_class_index]]])
+			train.drop(missing_class_index, inplace=True)
+
+		for missing_class in missing_classes_train:
+			print(f"Missing class '{missing_class}' in train set for column '{col}'")
+			# Moure una mostra amb la classe faltant del conjunt de prova al de entrenament
+			missing_class_index = test[test[col] == missing_class].index[0]
+			train = pd.concat([train, test.loc[[missing_class_index]]])
+			test.drop(missing_class_index, inplace=True)
 
