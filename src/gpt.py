@@ -151,3 +151,58 @@ def keep_classes_in_partitions(train: pd.DataFrame, test: pd.DataFrame):
 			train = pd.concat([train, test.loc[[missing_class_index]]])
 			test.drop(missing_class_index, inplace=True)
 
+def encode_variables(data: pd.DataFrame, save_to_csv: bool = True):
+    """
+    Codifica les variables categòriques que calgui per a poder-les utilitzar en els models de ML. 
+    A més, guarda el mapping per a poder decodificar-les.
+    """
+    from sklearn.preprocessing import OneHotEncoder
+    from sklearn.impute import SimpleImputer
+
+    global ohe_mapping, original_columns_order
+
+    original_columns_order = data.columns
+
+    columns_to_encode = ['Drug', 'Sex', 'Edema', 'Stage'] # Sense la variable 'Status' perquè és la target i, a més, no té valors NaN
+
+    na_indexs_per_old_encoded_column = {col: set(data[data[col].isna()].index) for col in columns_to_encode} # Guardem els indexs dels NaNs per a cada columna a codificar
+    new_encoded_columns_per_old_encoded_column = {col: set() for col in columns_to_encode} # Guardem les classes de cada columna a codificar
+
+    # Imputem els NaNs per evitar que es crein columnes innecessàries al fer el OneHotEncoding. Després tornarem a inserir els NaNs
+    data[columns_to_encode] = SimpleImputer(strategy='most_frequent').fit_transform(data[columns_to_encode])
+
+    ohe = OneHotEncoder(sparse_output=False, handle_unknown='ignore')
+
+    data_encoded = ohe.fit_transform(data[columns_to_encode])
+    encoded_columns = ohe.get_feature_names_out(columns_to_encode)
+
+    # Guardem el mapping per a poder decodificar les variables
+    ohe_mapping = {}
+    for i, col in enumerate(columns_to_encode):
+        # for category in original_categorical_categories[col]:
+        #     new_encoded_column_name = f"{col}_{category}"
+        #     ohe_mapping[new_encoded_column_name] = (col, category)
+        #     new_encoded_columns_per_old_encoded_column[col].add(new_encoded_column_name)
+
+        for category in ohe.categories_[i]:
+            new_encoded_column_name = f"{col}_{category}"
+            ohe_mapping[new_encoded_column_name] = (col, category)
+            new_encoded_columns_per_old_encoded_column[col].add(new_encoded_column_name)
+
+    data[encoded_columns] = data_encoded
+    data[encoded_columns] = data[encoded_columns].astype('category')
+
+    # Tornem a posar els NaNs per poder imputar-los
+    for col in columns_to_encode:
+        for na_index in na_indexs_per_old_encoded_column[col]:
+            for new_column in new_encoded_columns_per_old_encoded_column[col]:
+                data.loc[na_index, new_column] = np.nan
+
+    # Eliminem les columnes originals
+    data.drop(columns=columns_to_encode, inplace=True)
+
+    if save_to_csv:
+        # Guardem el dataset
+        data.to_csv('../assets/data/encoded_cirrhosis.csv', index=False)
+
+#encode_variables(data=data, save_to_csv=True)
