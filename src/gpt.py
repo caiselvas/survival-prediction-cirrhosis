@@ -206,3 +206,33 @@ def encode_variables(data: pd.DataFrame, save_to_csv: bool = True):
         data.to_csv('../assets/data/encoded_cirrhosis.csv', index=False)
 
 #encode_variables(data=data, save_to_csv=True)
+        
+def decode_variables(data: pd.DataFrame, ohe_mapping, original_columns_order):
+    """
+    Decodifica les variables categòriques que s'hagin codificat anteriorment.
+    """
+    reconstructed_columns = {}
+
+    # Creem les columnes reconstruïdes
+    for encoded_column in ohe_mapping:
+        if encoded_column in data.columns:
+            original_column, category = ohe_mapping[encoded_column]
+
+            if original_column not in reconstructed_columns:
+                reconstructed_columns[original_column] = pd.Series([np.nan] * len(data), index=data.index, dtype='object')
+
+            category_rows = data[encoded_column] == 1
+            reconstructed_columns[original_column].loc[category_rows] = category
+
+    # Eliminem les columnes codificades
+    data.drop(columns=[col for col in ohe_mapping if col in data.columns], inplace=True)
+
+    # Inserim les columnes reconstruïdes al DataFrame
+    for col in reconstructed_columns:
+        data[col] = reconstructed_columns[col]
+        data[col] = data[col].astype(original_column_types[col])
+
+    # Reordenem les columnes perquè quedin igual que a l'original
+    data = data.reindex(columns=original_columns_order)
+
+#decode_variables(data=data, ohe_mapping=ohe_mapping, original_columns_order=original_columns_order)
