@@ -47,7 +47,7 @@ El primer que s'ha fet per entendre el dataset i poder treballar amb ell és rea
 En les taules \ref{tab:num-stats-1} i \ref{tab:num-stats-2} es poden veure estadístiques sobre totes les variables numèriques del dataset (obtingudes mitjançant la comanda \texttt{data.describe()} de la llibreria \texttt{pandas}).
 
 % Table 1
-\begin{table}[ht]
+\begin{table}[H]
 \centering
 \begin{tabular}{lrrrrrr}
 \hline
@@ -68,7 +68,7 @@ max & 4795.0 & 28650.0 & 28.000000 & 1775.0 & 4.640000 & 588.0 \\
 \end{table}
 
 % Table 2
-\begin{table}[ht]
+\begin{table}[H]
 \centering
 \begin{tabular}{lrrrrrr}
 \hline
@@ -105,34 +105,22 @@ Addicionalment, en les figures \ref{fig:num-histograms-1} i \ref{fig:num-histogr
 \end{figure}
 
 \subsubsection{Variables categòriques}
-En les taules \ref{tab:cat-stats-1} i \ref{tab:cat-stats-2} podem veure altres estadístiques per les variables categòriques del dataset (obtingudes mitjançant la mateixa comanda, però amb el paràmetre \texttt{include=`category'}).
+En la taula \ref{tab:cat-stats-1} podem veure altres estadístiques per les variables categòriques del dataset (obtingudes mitjançant la mateixa comanda, però amb el paràmetre \texttt{include=`category'}).
 
 \begin{table}[H]
 \centering
-\begin{tabular}{|l|c|c|c|c|c|}
+\begin{tabular}{lrrrrrrrr}
 \hline
-\textbf{} & \textbf{ID} & \textbf{Status} & \textbf{Drug} & \textbf{Sex} & \textbf{Ascites} \\ \hline
-\textbf{count}     & 418         & 418             & 312            & 418           & 312              \\ \hline
-\textbf{unique}    & 418         & 3               & 2              & 2             & 2                \\ \hline
-\textbf{top}       & 1           & Alive           & D-penicillamine & F             & N                \\ \hline
-\textbf{freq}      & 1           & 232             & 158            & 374           & 288              \\ \hline
+\textbf{} & \textbf{Status} & \textbf{Drug} & \textbf{Sex} & \textbf{Ascites} & \textbf{Hepatomegaly} & \textbf{Spiders} & \textbf{Edema} & \textbf{Stage} \\ 
+\hline
+count & 418 & 312 & 418 & 312 & 312 & 312 & 418 & 412.0 \\ 
+unique & 3 & 2 & 2 & 2 & 2 & 2 & 3 & 4.0 \\ 
+top & Alive & 1 & F & 0 & 1 & 0 & NoEdema & 3.0 \\ 
+freq & 232 & 158 & 374 & 288 & 160 & 222 & 354 & 155.0 \\ 
+\hline
 \end{tabular}
-\caption{Estadístiques sobre les variables categòriques ID, Status, Drug, Sex i Ascites.}
+\caption{Categorical data summary of the study.}
 \label{tab:cat-stats-1}
-\end{table}
-
-\begin{table}[H]
-\centering
-\begin{tabular}{|l|c|c|c|c|}
-\hline
-\textbf{} & \textbf{Hepatomegaly} & \textbf{Spiders} & \textbf{Edema} & \textbf{Stage} \\ \hline
-\textbf{count}     & 312                    & 312              & 418             & 412.0          \\ \hline
-\textbf{unique}    & 2                      & 2                & 3               & 4.0            \\ \hline
-\textbf{top}       & Y                      & N                & N               & 3.0            \\ \hline
-\textbf{freq}      & 160                    & 222              & 354             & 155.0          \\ \hline
-\end{tabular}
-\caption{Estadístiques sobre les variabes categòriques Hepatomegaly, Spiders, Edema i Stage.}
-\label{tab:cat-stats-2}
 \end{table}
 
 A més, en les figures \ref{fig:cat-countplots-1} i \ref{fig:cat-countplots-2} es poden veure els countplots de cada una de les variables categòriques, on es veu la quantitat de mostres que hi ha per cada classe de la variable, evitant els valors faltants (missings).
