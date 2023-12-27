@@ -1,15 +1,41 @@
 \section{Anàlisis i preprocessat de dades}
 
 \subsection{Preprocessat inicial}
-Una vegada importem el dataset, es pot veure que hi ha bastantes cel·les buides i altres amb el string \texttt{`NaNN'}. Per solucionar aquesta inconsistència, s'han reemplaçat tots aquests valors per \texttt{pd.NA}. \\
+Una vegada importem el dataset, es pot veure que hi ha bastantes cel·les buides i altres amb el string \texttt{`NaNN'}. Per solucionar aquesta inconsistència, s'han reemplaçat tots aquests valors per \texttt{pd.NA}.
 
-Per altra banda, s'ha declarat el tipus de cada variable correctament (com a numèriques o com a categòriques) seguint la informació que es proporciona en el metadata file (que es pot trobar en \cite{misc_cirrhosis_patient_survival_prediction_878}).\\
+Per altra banda, s'ha declarat el tipus de cada variable correctament (com a numèriques o com a categòriques) seguint la informació que es proporciona en el metadata file (que es pot trobar en \cite{misc_cirrhosis_patient_survival_prediction_878}).
 
-Addicionalment, per una millor comprensió de la variable \textit{Status}, s'ha decidit reanomenar els seus valors, tenint en compte el metadata file, de la següent manera:
+A més, com que la variable ID no és res més que l'identificador dels pacients, i no serà necessari pel nostre estudi, s'ha decidit eliminar del dataset per no haver d'eliminar-la manualment a cada procés. És a dir, entrenar un model de predicció tenint en compte l'ID del pacient no té cap sentit i només pot portar a overfitting (si troba patrons entre la variable objectiu i la variable ID). A més, a l'hora de fer gràfics no és una variable que aporti cap informació, ja que és categòrica i amb tantes classes úniques com files hi ha al dataset, de manera no es podrien interpretar els plots de cap manera.
+
+Addicionalment, per una millor comprensió de certes variables, s'ha decidit reanomenar els seus valors, tenint en compte el metadata file, de la següent manera:
 \begin{itemize}
-	\item \textbf{`C'} $\rightarrow$ `Alive'.
-	\item \textbf{`CL'} $\rightarrow$ `Liver Transplant'.
-	\item \textbf{`D'} $\rightarrow$ `Dead'.
+	\item \textbf{Variable Status:}
+	\begin{itemize}
+		\item \textbf{`C'} $\rightarrow$ `Alive'.
+		\item \textbf{`CL'} $\rightarrow$ `Liver Transplant'.
+		\item \textbf{`D'} $\rightarrow$ `Dead'.
+	\end{itemize}
+	
+	\item \textbf{Variable Edema:}
+	\begin{itemize}
+		\item \textbf{`N'} $\rightarrow$ `NoEdema'.
+		\item \textbf{`S'} $\rightarrow$ `EdemaResolved'.
+		\item \textbf{`Y'} $\rightarrow$ `EdemaPersistent'.
+	\end{itemize}
+	
+	\item \textbf{Variable Drug:}
+	\begin{itemize}
+		\item \textbf{`D-penicillamine'} $\rightarrow$ 1.
+		\item \textbf{`Placebo'} $\rightarrow$ 0.
+	\end{itemize}
+	
+	\item \textbf{Variables Ascites, Hepatomegaly i Spiders:}
+	\begin{itemize}
+		\item \textbf{`Y'} $\rightarrow$ 1.
+		\item \textbf{`N'} $\rightarrow$ 0.
+	\end{itemize}
+	
+	
 \end{itemize}
 
 Una vegada realitzats aquests canvis, es pot començar a treballar amb el dataset correctament.
@@ -20,45 +46,48 @@ El primer que s'ha fet per entendre el dataset i poder treballar amb ell és rea
 \subsubsection{Variables numèriques}
 En les taules \ref{tab:num-stats-1} i \ref{tab:num-stats-2} es poden veure estadístiques sobre totes les variables numèriques del dataset (obtingudes mitjançant la comanda \texttt{data.describe()} de la llibreria \texttt{pandas}).
 
-\begin{table}[H]
+% Table 1
+\begin{table}[ht]
 \centering
-\begin{tabular}{|l|c|c|c|c|c|}
+\begin{tabular}{lrrrrrr}
 \hline
-\textbf{} & \textbf{N\_Days} & \textbf{Age} & \textbf{Bilirubin} & \textbf{Cholesterol} & \textbf{Albumin} \\ \hline
-\textbf{count} & 418.0 & 418.0 & 418.000000 & 284.0 & 418.000000 \\ \hline
-\textbf{mean} & 1917.782297 & 18533.351675 & 3.220813 & 369.510563 & 3.497440 \\ \hline
-\textbf{std} & 1104.672992 & 3815.845055 & 4.407506 & 231.944545 & 0.424972 \\ \hline
-\textbf{min} & 41.0 & 9598.0 & 0.300000 & 120.0 & 1.960000 \\ \hline
-\textbf{25\%} & 1092.75 & 15644.5 & 0.800000 & 249.5 & 
-3.242500 \\ \hline
-\textbf{50\%} & 1730.0 & 18628.0 & 1.400000 & 309.5 & 
-3.530000 \\ \hline
-\textbf{75\%} & 2613.5 & 21272.5 & 3.400000 & 400.0 & 
-3.770000 \\ \hline
-\textbf{max} & 4795.0 & 28650.0 & 28.000000 & 1775.0 & 
-4.640000 \\ \hline
+\textbf{Statistic} & \textbf{N\_Days} & \textbf{Age} & \textbf{Bilirubin} & \textbf{Cholesterol} & \textbf{Albumin} & \textbf{Copper} \\ 
+\hline
+count & 418.0 & 418.0 & 418.000000 & 284.0 & 418.000000 & 310.0 \\ 
+mean & 1917.782297 & 18533.351675 & 3.220813 & 369.510563 & 3.497440 & 97.648387 \\ 
+std & 1104.672992 & 3815.845055 & 4.407506 & 231.944545 & 0.424972 & 85.61392 \\ 
+min & 41.0 & 9598.0 & 0.300000 & 120.0 & 1.960000 & 4.0 \\ 
+25\% & 1092.75 & 15644.5 & 0.800000 & 249.5 & 3.242500 & 41.25 \\ 
+50\% & 1730.0 & 18628.0 & 1.400000 & 309.5 & 3.530000 & 73.0 \\ 
+75\% & 2613.5 & 21272.5 & 3.400000 & 400.0 & 3.770000 & 123.0 \\ 
+max & 4795.0 & 28650.0 & 28.000000 & 1775.0 & 4.640000 & 588.0 \\
+\hline
 \end{tabular}
-\caption{Estadístiques de les variables numèriques N\_Days, Age, Bilirubin, Cholesterol i Albumin.}
+\caption{Estadístiques de les variables numèriques.}
 \label{tab:num-stats-1}
 \end{table}
 
-\begin{table}[H]
+% Table 2
+\begin{table}[ht]
 \centering
-\begin{tabular}{|l|c|c|c|c|c|c|}
+\begin{tabular}{lrrrrrr}
 \hline
-\textbf{} & \textbf{Copper} & \textbf{Alk\_Phos} & \textbf{SGOT} & \textbf{Triglycerides} & \textbf{Platelets} & \textbf{Prothrombin} \\ \hline
-\textbf{count}     & 310.0           & 312.000000        & 312.000000    & 282.0                  & 407.0              & 416.000000           \\ \hline
-\textbf{mean}      & 97.648387       & 1982.655769       & 122.55364     & 124.702128             & 257.02457          & 10.731731            \\ \hline
-\textbf{std}       & 85.61392        & 2140.388824       & 56.699525     & 65.148639              & 98.325585          & 1.02200              \\ \hline
-\textbf{min}       & 4.0             & 289.000000        & 26.350000     & 33.0                   & 62.0               & 9.00000              \\ \hline
-\textbf{25\%}      & 41.25           & 871.500000        & 80.600000     & 84.25                  & 188.5              & 10.00000             \\ \hline
-\textbf{50\%}      & 73.0            & 1259.000000       & 114.700000    & 108.0                  & 251.0              & 10.60000             \\ \hline
-\textbf{75\%}      & 123.0           & 1980.000000       & 151.900000    & 151.0                  & 318.0              & 11.10000             \\ \hline
-\textbf{max}       & 588.0           & 13862.400000      & 457.250000    & 598.0                  & 721.0              & 18.00000             \\ \hline
+\textbf{Statistic} & \textbf{Alk\_Phos} & \textbf{SGOT} & \textbf{Tryglicerides} & \textbf{Platelets} & \textbf{Prothrombin} \\ 
+\hline
+count & 312.000000 & 312.000000 & 282.0 & 407.0 & 416.000000 \\ 
+mean & 1982.655769 & 122.556346 & 124.702128 & 257.02457 & 10.731731 \\ 
+std & 2140.388824 & 56.699525 & 65.148639 & 98.325585 & 1.022000 \\ 
+min & 289.000000 & 26.350000 & 33.0 & 62.0 & 9.000000 \\ 
+25\% & 871.500000 & 80.600000 & 84.25 & 188.5 & 10.000000 \\ 
+50\% & 1259.000000 & 114.700000 & 108.0 & 251.0 & 10.600000 \\ 
+75\% & 1980.000000 & 151.900000 & 151.0 & 318.0 & 11.100000 \\ 
+max & 13862.400000 & 457.250000 & 598.0 & 721.0 & 18.000000 \\
+\hline
 \end{tabular}
-\caption{Estadístiques sobre les variables numèriques Copper, Alk\_Phos, SGOT, Triglycerides, Platelets i Prothrombin}
+\caption{Estadístiques de les variables numèriques.}
 \label{tab:num-stats-2}
 \end{table}
+
 
 Addicionalment, en les figures \ref{fig:num-histograms-1} i \ref{fig:num-histograms-2} es poden veure les histogrames de cada una de les variables numèriques, on es veu la distribució de les seves dades ignorant els valors faltants (missings).
 
