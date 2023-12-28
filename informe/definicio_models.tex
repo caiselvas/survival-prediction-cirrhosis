@@ -64,7 +64,19 @@ Per aquestes raons, hem escollit utilitzar un arbre de decisió com a eina princ
 \subsection{Support Vector Machine (SVM)}
 
 \subsubsection{Motivació}
+En el context del nostre dataset, que inclou dades diverses de pacients amb cirrosi hepàtica, l'elecció de Màquines de Suport Vectorial (SVM) per a la predicció de la variable "Status" es basa en diverses consideracions clau.
 
+Primer, les SVM són particularment eficaces en espais de característiques de gran dimensió. Això és rellevant en el nostre cas, ja que el dataset inclou una àmplia gamma de variables, incloent dades demogràfiques, clíniques i bioquímiques. Les SVM poden manejar aquesta complexitat, gràcies a la seva capacitat de maximitzar el marge entre les classes, proporcionant un model robust i generalitzable.
+
+A més, les SVM ofereixen una gran flexibilitat mitjançant l'ús de diferents funcions de kernel. Això ens permet explorar diferents maneres de modelar les relacions no lineals entre les variables i la variable objectiu "Status". Per exemple, un kernel polinòmic o de base radial (RBF) pot capturar relacions complexes que podrien ser crucials per entendre l'evolució de la cirrosi en els pacients.
+
+Un altre avantatge important de les SVM és la seva capacitat de controlar l'equilibri entre l'error de classificació i la complexitat del model a través del paràmetre de regularització C. Això és especialment útil quan es treballa amb dades mèdiques, on el balanç entre sensibilitat i especificitat és fonamental.
+
+A més, les SVM poden ser efectives en datasets desequilibrats, com és el cas amb les dades sobre cirrosi. Amb l'ajust adequat dels paràmetres i l'ús de tècniques com el pesatge de classes, les SVM poden ser entrenades per donar més importància a les classes minoritàries, millorant així la seva capacitat predictiva en casos més rars però crítics.
+
+Finalment, la robustesa de les SVM davant dades amb soroll o outliers les fa una opció atractiva per a datasets complexos i desordenats, típics en l'àmbit de la salut.
+
+Per tots aquests motius, hem decidit utilitzar SVM com a mètode de predicció per a la variable "Status" en el nostre dataset, esperant obtenir models predictius precisos i fiables.
 \subsubsection{Mètriques}
 
 \subsubsection{Hiperparàmetres}

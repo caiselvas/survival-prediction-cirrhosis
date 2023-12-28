@@ -136,9 +136,42 @@ En cas que es volgués eliminar alguna variable numèrica, ja s'ha mencionat que
 \subsection{Estudi de dimensionalitat (ACP)}
 En aquest apartat s'ha realitzat un estudi sobre la dimensionalitat de la base de dades d'entrenament mitjançant l'Anàlisi de Components Principals (ACP o PCA).
 
+En la figura \ref{fig:acp-cum-var} es pot veure el percentatge de variància explicada en funció del nombre de components principals. Es pot veure que amb els 7 primers components principals ja s'explica un 80\% de la variància. Per tant, en cas que es desitgés fer una reducció de la dimensionalitat, amb tan sols 7 components principals (en comptes de les 11 variables numèriques que hi ha ara) es podria explicar un 80\% de la variància, que generalment es considera suficient per no perdre informació rellevant i fins i tot eliminar soroll o redundància.
+
 \begin{figure}[H]
-    \includegraphics[width=0.85\textwidth]{img/acp.png}
-    \caption{Status vs status}
-    \label{fig:status_vs_status}
+	\centering
+    \includegraphics[width=0.9\textwidth]{img/acp_cum_explained_variance.png}
+    \caption{Percentatge de variància explicada en funció del nombre de components principals.}
+    \label{fig:acp-cum-var}
 \end{figure}
+
+En la figura \ref{fig:acp-num-proj} es poden veure les projeccions de les variables numèriques en els dos primers eixos principals. El primer eix principal explica un 25,77\% de la variància i el segon un 19,64\% de la variància, de manera que tenim aproximadament un 45\% de la variància explicada. Amb això, les conclusions que extraiem d'aquí s'han de tractar amb molt de compte, ja que no seran conclusions extretes de tota la informació del dataset, sinó d'aproximadament la meitat. Es pot apreciar, com ja hem mencionat en l'anàlisi de correlacions entre variables numèriques, que les variables \textit{Bilirubin}, \textit{Copper} i \textit{SGOT} estan bastant relacionades, i en aquest cas veiem que es projecten bastant sobre el primer eix principal.
+
+Per tant, el primer eix principal es caracteritza princpalment per els valors positius de \textit{Bilirubin}, \textit{Copper}, \textit{SGOT} i lleugerament \textit{Cholesterol}; i els valors negatius (relació inversa) lleugerament amb \textit{N\_Days}.
+
+Pel que fa al segon eix principal, veiem que hi té projectades positivament \textit{Age} i \textit{Prothrombin}; i negativament sobretot \textit{Platelets}, però també lleugerament \textit{Cholesterol} i \textit{Albumin}. Amb la informació del segon eix, es podria dir que el valor de l'edat té una relació inversa amb el de \textit{Platelets}; és a dir, la gent més gran tendeix a tenir un valor de \textit{Platelets} més petit.
+
+Resumint, es podria dir que el primer eix principal conté sobretot característiques sobre les dades mesurades del pacient, mentre que el s
+
+\begin{figure}[H]
+	\centering
+    \includegraphics[width=0.9\textwidth]{img/acp_num_vars_projections.png}
+    \caption{Projecció de les variables numèriques en els dos primers components principals.}
+    \label{fig:acp-num-proj}
+\end{figure}
+
+Finalment, en la figura \ref{fig:acp-cat-proj} es pot veure la projecció dels centroides de les classes de les variables categòriques en els dos primers eixos principals. S'hi poden veure les classes de la variable target (\textit{Status}) clarament diferenciades. A més, hi ha curiositats com que el sexe masculí (M) es troba més aprop de `Dead' que el femení (F), indicant-nos que els homes tendeixen més a morir (\textit{Status} = `Dead') que les dones. També podem veure com el fet de tenir \textit{Spiders} o tenir \textit{Hepatomegaly} ``apropa'' al pacient cap a `Dead' (és a dir, en mitjana, és més probable que mori). Finalment, es pot mencionar la clara tendència de \textit{Stage} a apropar-se a `Dead' a mesura que augmenta el seu valor (com és lògic, en etapes més avançades de la malaltia és menys probable sobreviure).
+
+\begin{figure}[H]
+	\centering
+    \includegraphics[width=0.9\textwidth]{img/acp_cat_vars_centroids.png}
+    \caption{Projecció dels centroides de les classes de les variables categòriques en els dos primers components.}
+    \label{fig:acp-cat-proj}
+\end{figure}
+
+Ajuntant la informació de les variables categòriques i de les numèriques (figures \ref{fig:acp-num-proj} i \ref{fig:acp-cat-proj}) podem dir que les variables numèriques que tenen més relació positiva amb la `Dead' són \textit{Copper} i \textit{Bilirubin}, mentre que \textit{Albumin} i \textit{N\_Days} tenen una relació positiva amb `Alive'. És a dir, tenen més probabilitats de sobreviure els pacients que tenen valors baixos de \textit{Copper} i \textit{Bilirubin} i valors alts de \textit{Albumin} i \textit{N\_Days}.
+
+Com ja s'ha mencionat, aquestes conclusions no poden interpretar-se al peu de la lletra, ja que estan fetes sobre un 45\% de la variància explicada (i no pas un 100\%). No obstant, poden donar-nos unes nocions sobre les relacions entre variables, tant numèriques com categòriques com amb \textit{Status}.
+
+En cas de que es desitgés fer una reducció de dimensionalitat per treballar amb components, les avantatges serien que hi hauria menys dimensions i seria més fàcil gestionar les dades. No obstant, s'ha de considerar que, com acabem de veure, es perd molta interpretabilitat i cada component passa a ser una barreja de conceptes i valors difícilment interpretable.
 
