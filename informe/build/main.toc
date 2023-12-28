@@ -5,45 +5,46 @@
 \contentsline {section}{\numberline {2}Documents i estructura general de l'entrega}{7}{section.2}%
 \contentsline {section}{\numberline {3}Anàlisis i preprocessat de dades}{8}{section.3}%
 \contentsline {subsection}{\numberline {3.1}Preprocessat inicial}{8}{subsection.3.1}%
-\contentsline {subsection}{\numberline {3.2}Anàlisis estadístic de les variables i estudi de balanceig de classes}{9}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.2}Anàlisis estadístic de les variables}{9}{subsection.3.2}%
 \contentsline {subsubsection}{\numberline {3.2.1}Variables numèriques}{9}{subsubsection.3.2.1}%
 \contentsline {subsubsection}{\numberline {3.2.2}Variables categòriques}{12}{subsubsection.3.2.2}%
-\contentsline {subsection}{\numberline {3.3}Missings}{14}{subsection.3.3}%
-\contentsline {subsection}{\numberline {3.4}Outliers}{14}{subsection.3.4}%
-\contentsline {subsection}{\numberline {3.5}Recodificació de variables}{14}{subsection.3.5}%
-\contentsline {subsection}{\numberline {3.6}Particionat del dataset}{14}{subsection.3.6}%
-\contentsline {section}{\numberline {4}Preparació de variables}{15}{section.4}%
-\contentsline {subsection}{\numberline {4.1}Normalització de variables}{15}{subsection.4.1}%
-\contentsline {subsection}{\numberline {4.2}Anàlisi de correlacions entre variables numèriques}{15}{subsection.4.2}%
-\contentsline {subsection}{\numberline {4.3}Anàlisi de variables categòriques i variable objectiu}{15}{subsection.4.3}%
-\contentsline {subsection}{\numberline {4.4}Eliminació de variables}{15}{subsection.4.4}%
-\contentsline {subsection}{\numberline {4.5}Estudi de dimensionalitat (PCA)}{15}{subsection.4.5}%
-\contentsline {section}{\numberline {5}Definició de models}{17}{section.5}%
-\contentsline {subsection}{\numberline {5.1}K-Nearest Neighbors (KNN)}{17}{subsection.5.1}%
-\contentsline {subsubsection}{\numberline {5.1.1}Motivació}{17}{subsubsection.5.1.1}%
-\contentsline {subsubsection}{\numberline {5.1.2}Mètriques}{17}{subsubsection.5.1.2}%
-\contentsline {subsubsection}{\numberline {5.1.3}Hiperparàmetres}{17}{subsubsection.5.1.3}%
-\contentsline {subsubsection}{\numberline {5.1.4}Entrenament}{17}{subsubsection.5.1.4}%
-\contentsline {subsubsection}{\numberline {5.1.5}Resultats}{17}{subsubsection.5.1.5}%
-\contentsline {subsection}{\numberline {5.2}Arbre de decisió}{17}{subsection.5.2}%
-\contentsline {subsubsection}{\numberline {5.2.1}Motivació}{17}{subsubsection.5.2.1}%
-\contentsline {subsubsection}{\numberline {5.2.2}Mètriques}{17}{subsubsection.5.2.2}%
-\contentsline {subsubsection}{\numberline {5.2.3}Hiperparàmetres}{17}{subsubsection.5.2.3}%
-\contentsline {subsubsection}{\numberline {5.2.4}Entrenament}{17}{subsubsection.5.2.4}%
-\contentsline {subsubsection}{\numberline {5.2.5}Resultats}{17}{subsubsection.5.2.5}%
-\contentsline {subsection}{\numberline {5.3}Support Vector Machine (SVM)}{17}{subsection.5.3}%
-\contentsline {subsubsection}{\numberline {5.3.1}Motivació}{17}{subsubsection.5.3.1}%
-\contentsline {subsubsection}{\numberline {5.3.2}Mètriques}{17}{subsubsection.5.3.2}%
-\contentsline {subsubsection}{\numberline {5.3.3}Hiperparàmetres}{17}{subsubsection.5.3.3}%
-\contentsline {subsubsection}{\numberline {5.3.4}Entrenament}{17}{subsubsection.5.3.4}%
-\contentsline {subsubsection}{\numberline {5.3.5}Resultats}{17}{subsubsection.5.3.5}%
-\contentsline {section}{\numberline {6}Selecció del model}{18}{section.6}%
-\contentsline {subsection}{\numberline {6.1}Descripció del model triat}{18}{subsection.6.1}%
-\contentsline {subsection}{\numberline {6.2}Anàlisi de les limitacions i capacitats del model}{18}{subsection.6.2}%
-\contentsline {subsection}{\numberline {6.3}Resultats}{18}{subsection.6.3}%
-\contentsline {section}{\numberline {7}Model card}{19}{section.7}%
-\contentsline {section}{\numberline {8}Bonus 1: Model EBM i comparació amb els models anteriors}{20}{section.8}%
-\contentsline {section}{\numberline {9}Bonus 2: Anàlisi no supervisat de les dades}{21}{section.9}%
-\contentsline {section}{\numberline {10}Conclusions}{22}{section.10}%
-\contentsline {subsection}{\numberline {10.1}Valoració de l'aprenentatge adquirit}{22}{subsection.10.1}%
-\contentsline {section}{\numberline {11}Refer\`encies}{23}{section.11}%
+\contentsline {subsection}{\numberline {3.3}Outliers}{14}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.4}Particionat del dataset}{18}{subsection.3.4}%
+\contentsline {subsection}{\numberline {3.5}Missings}{18}{subsection.3.5}%
+\contentsline {subsection}{\numberline {3.6}Recodificació de variables}{20}{subsection.3.6}%
+\contentsline {section}{\numberline {4}Preparació de variables}{22}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Normalització i escalat de variables}{22}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Anàlisi de correlacions entre variables numèriques}{22}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Anàlisi de variables categòriques i variable objectiu}{24}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}Balanceig de classes de la variable objectiu}{26}{subsection.4.4}%
+\contentsline {subsection}{\numberline {4.5}Eliminació de variables}{27}{subsection.4.5}%
+\contentsline {subsection}{\numberline {4.6}Estudi de dimensionalitat (ACP)}{27}{subsection.4.6}%
+\contentsline {section}{\numberline {5}Definició de models}{28}{section.5}%
+\contentsline {subsection}{\numberline {5.1}K-Nearest Neighbors (KNN)}{29}{subsection.5.1}%
+\contentsline {subsubsection}{\numberline {5.1.1}Motivació}{29}{subsubsection.5.1.1}%
+\contentsline {subsubsection}{\numberline {5.1.2}Mètriques}{29}{subsubsection.5.1.2}%
+\contentsline {subsubsection}{\numberline {5.1.3}Hiperparàmetres}{30}{subsubsection.5.1.3}%
+\contentsline {subsubsection}{\numberline {5.1.4}Entrenament}{30}{subsubsection.5.1.4}%
+\contentsline {subsubsection}{\numberline {5.1.5}Resultats}{30}{subsubsection.5.1.5}%
+\contentsline {subsection}{\numberline {5.2}Arbre de decisió}{30}{subsection.5.2}%
+\contentsline {subsubsection}{\numberline {5.2.1}Motivació}{30}{subsubsection.5.2.1}%
+\contentsline {subsubsection}{\numberline {5.2.2}Mètriques}{31}{subsubsection.5.2.2}%
+\contentsline {subsubsection}{\numberline {5.2.3}Hiperparàmetres}{31}{subsubsection.5.2.3}%
+\contentsline {subsubsection}{\numberline {5.2.4}Entrenament}{31}{subsubsection.5.2.4}%
+\contentsline {subsubsection}{\numberline {5.2.5}Resultats}{31}{subsubsection.5.2.5}%
+\contentsline {subsection}{\numberline {5.3}Support Vector Machine (SVM)}{31}{subsection.5.3}%
+\contentsline {subsubsection}{\numberline {5.3.1}Motivació}{31}{subsubsection.5.3.1}%
+\contentsline {subsubsection}{\numberline {5.3.2}Mètriques}{31}{subsubsection.5.3.2}%
+\contentsline {subsubsection}{\numberline {5.3.3}Hiperparàmetres}{31}{subsubsection.5.3.3}%
+\contentsline {subsubsection}{\numberline {5.3.4}Entrenament}{31}{subsubsection.5.3.4}%
+\contentsline {subsubsection}{\numberline {5.3.5}Resultats}{31}{subsubsection.5.3.5}%
+\contentsline {section}{\numberline {6}Selecció del model}{32}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Descripció del model triat}{32}{subsection.6.1}%
+\contentsline {subsection}{\numberline {6.2}Anàlisi de les limitacions i capacitats del model}{32}{subsection.6.2}%
+\contentsline {subsection}{\numberline {6.3}Resultats}{32}{subsection.6.3}%
+\contentsline {section}{\numberline {7}Model card}{33}{section.7}%
+\contentsline {section}{\numberline {8}Bonus 1: Model EBM i comparació amb els models anteriors}{34}{section.8}%
+\contentsline {section}{\numberline {9}Bonus 2: Anàlisi no supervisat de les dades}{35}{section.9}%
+\contentsline {section}{\numberline {10}Conclusions}{36}{section.10}%
+\contentsline {subsection}{\numberline {10.1}Valoració de l'aprenentatge adquirit}{36}{subsection.10.1}%
+\contentsline {section}{\numberline {11}Refer\`encies}{37}{section.11}%

@@ -236,3 +236,62 @@ def decode_variables(data: pd.DataFrame, ohe_mapping, original_columns_order):
     data = data.reindex(columns=original_columns_order)
 
 #decode_variables(data=data, ohe_mapping=ohe_mapping, original_columns_order=original_columns_order)
+    
+
+def decode_variables(data: pd.DataFrame, oe_mapping: dict):
+    """
+    Decodifica las variables categóricas previamente codificadas con OrdinalEncoder.
+    """
+    data = data.copy()
+
+    for col, mapping in oe_mapping.items():
+        if col in data.columns:
+            data[col] = data[col].map(mapping).astype('category')
+
+    return data
+
+
+	from sklearn.decomposition import PCA
+
+	# Aplicar PCA
+	pca = PCA(n_components=0.80)
+	X_pca = pca.fit_transform(data[numerical_columns])
+
+	# Variància acumulada
+	plt.figure(figsize=(10, 6))
+	plt.plot(np.cumsum(pca.explained_variance_ratio_))
+	plt.xlabel('Número de components')
+	plt.ylabel('Variància acumulada')
+	plt.title('Anàlisi de de la variància acumulada en funció del número de components')
+	plt.grid(True)
+	plt.show()
+
+	# Gràfic de barres amb una línia que marca el 80% de la variància
+	plt.figure(figsize=(10, 6))
+	plt.bar(range(len(pca.explained_variance_ratio_)), pca.explained_variance_ratio_)
+	plt.plot(range(len(pca.explained_variance_ratio_)), np.cumsum(pca.explained_variance_ratio_), c='red')
+	plt.xlabel('Número de components')
+	plt.ylabel('Variància')
+	plt.title('Anàlisi de la variància en funció del número de components')
+	plt.grid(True)
+	plt.show()
+
+	# Projecció de les variables numèriques
+	plt.figure(figsize=(10, 6))
+	plt.scatter(X_pca[:, 0], X_pca[:, 1])
+	inercia_primer_comp = round(pca.explained_variance_ratio_[0] * 100, 2)
+	inercia_segon_comp= round(pca.explained_variance_ratio_[1] * 100, 2)
+	plt.xlabel(f'1r component principal ({inercia_primer_comp}%)')
+	plt.ylabel(f'2n component principal ({inercia_segon_comp}%)')
+	plt.title('Projecció de les variables numèriques sobre els dos primers components principals')
+	plt.grid(True)
+
+	# Projecció de les variables categòriques
+	for col in categorical_columns:
+		if col in data.columns:
+			for category in np.unique(data[col]):
+				mask = data[col] == category
+				centroid = np.mean(X_pca[mask], axis=0)
+				plt.scatter(centroid[0], centroid[1], marker='x', color='red')
+	plt.legend()
+	plt.show()

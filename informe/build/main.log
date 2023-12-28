@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 23.1) (preloaded format=pdflatex 2023.3.25)  27 DEC 2023 17:26
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 23.1) (preloaded format=pdflatex 2023.3.25)  28 DEC 2023 03:23
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -46,6 +46,33 @@ File: pdftex.def 2022/09/22 v1.2b Graphics/color driver for pdftex
 ))
 \Gin@req@height=\dimen141
 \Gin@req@width=\dimen142
+)
+(C:\Users\Cai Selvas Sala\AppData\Roaming\MiKTeX\tex/latex/caption\subcaption.s
+ty
+Package: subcaption 2023/07/28 v1.6b Sub-captions (AR)
+
+(C:\Users\Cai Selvas Sala\AppData\Roaming\MiKTeX\tex/latex/caption\caption.sty
+Package: caption 2023/08/05 v3.6o Customizing captions (AR)
+
+(C:\Users\Cai Selvas Sala\AppData\Roaming\MiKTeX\tex/latex/caption\caption3.sty
+Package: caption3 2023/07/31 v2.4d caption3 kernel (AR)
+\caption@tempdima=\dimen143
+\captionmargin=\dimen144
+\caption@leftmargin=\dimen145
+\caption@rightmargin=\dimen146
+\caption@width=\dimen147
+\caption@indent=\dimen148
+\caption@parindent=\dimen149
+\caption@hangindent=\dimen150
+Package caption Info: Standard document class detected.
+)
+\c@caption@flags=\count193
+\c@continuedfloat=\count194
+)
+Package caption Info: New subtype `subfigure' on input line 238.
+\c@subfigure=\count195
+Package caption Info: New subtype `subtable' on input line 238.
+\c@subtable=\count196
 )
 (C:\Users\Cai Selvas Sala\AppData\Roaming\MiKTeX\tex/latex/fancyhdr\fancyhdr.st
 y
@@ -117,11 +144,11 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 sty
 Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
 ))
-\c@section@level=\count193
+\c@section@level=\count197
 )
-\@linkdim=\dimen143
-\Hy@linkcounter=\count194
-\Hy@pagecounter=\count195
+\@linkdim=\dimen151
+\Hy@linkcounter=\count198
+\Hy@pagecounter=\count199
  (C:\Program Files\MiKTeX\tex/latex/hyperref\pd1enc.def
 File: pd1enc.def 2023-02-07 v7.00v Hyperref: PDFDocEncoding definition (HO)
 Now handling font encoding PD1 ...
@@ -135,7 +162,7 @@ Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 sty
 Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
 )
-\Hy@SavedSpaceFactor=\count196
+\Hy@SavedSpaceFactor=\count266
  (C:\Program Files\MiKTeX\tex/latex/hyperref\puenc.def
 File: puenc.def 2023-02-07 v7.00v Hyperref: PDF Unicode definition (HO)
 Now handling font encoding PU ...
@@ -148,14 +175,14 @@ Package hyperref Info: Plain pages OFF on input line 4192.
 Package hyperref Info: Backreferencing OFF on input line 4197.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4425.
-\c@Hy@tempcnt=\count197
+\c@Hy@tempcnt=\count267
 
 (C:\Program Files\MiKTeX\tex/latex/url\url.sty
 \Urlmuskip=\muskip16
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
 LaTeX Info: Redefining \url on input line 4763.
-\XeTeXLinkMargin=\dimen144
+\XeTeXLinkMargin=\dimen152
 
 (C:\Users\Cai Selvas Sala\AppData\Roaming\MiKTeX\tex/generic/bitset\bitset.sty
 Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
@@ -165,9 +192,9 @@ alc.sty
 Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
 )
 ))
-\Fld@menulength=\count198
-\Field@Width=\dimen145
-\Fld@charsize=\dimen146
+\Fld@menulength=\count268
+\Field@Width=\dimen153
+\Fld@charsize=\dimen154
 Package hyperref Info: Hyper figures OFF on input line 6042.
 Package hyperref Info: Link nesting OFF on input line 6047.
 Package hyperref Info: Hyper index ON on input line 6050.
@@ -179,9 +206,9 @@ Package hyperref Info: PDF/A mode OFF on input line 6072.
 Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
 package with kernel methods
 )
-\Hy@abspage=\count199
-\c@Item=\count266
-\c@Hfootnote=\count267
+\Hy@abspage=\count269
+\c@Item=\count270
+\c@Hfootnote=\count271
 )
 Package hyperref Info: Driver (autodetected): hpdftex.
 
@@ -193,8 +220,8 @@ Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atveryend pac
 kage
 with kernel methods
 )
-\Fld@listcount=\count268
-\c@bookmark@seq@number=\count269
+\Fld@listcount=\count272
+\c@bookmark@seq@number=\count273
 
 (C:\Users\Cai Selvas Sala\AppData\Roaming\MiKTeX\tex/latex/rerunfilecheck\rerun
 filecheck.sty
@@ -211,7 +238,7 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 )
 (C:\Users\Cai Selvas Sala\AppData\Roaming\MiKTeX\tex/latex/float\float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count270
+\c@float@type=\count274
 \float@exts=\toks17
 \float@box=\box51
 \@float@everytoks=\toks18
@@ -232,29 +259,29 @@ Package: geometry 2020/01/02 v5.9 Page Geometry
  (C:\Program Files\MiKTeX\tex/generic/iftex\ifvtex.sty
 Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 )
-\Gm@cnth=\count271
-\Gm@cntv=\count272
-\c@Gm@tempcnt=\count273
-\Gm@bindingoffset=\dimen147
-\Gm@wd@mp=\dimen148
-\Gm@odd@mp=\dimen149
-\Gm@even@mp=\dimen150
-\Gm@layoutwidth=\dimen151
-\Gm@layoutheight=\dimen152
-\Gm@layouthoffset=\dimen153
-\Gm@layoutvoffset=\dimen154
+\Gm@cnth=\count275
+\Gm@cntv=\count276
+\c@Gm@tempcnt=\count277
+\Gm@bindingoffset=\dimen155
+\Gm@wd@mp=\dimen156
+\Gm@odd@mp=\dimen157
+\Gm@even@mp=\dimen158
+\Gm@layoutwidth=\dimen159
+\Gm@layoutheight=\dimen160
+\Gm@layouthoffset=\dimen161
+\Gm@layoutvoffset=\dimen162
 \Gm@dimlist=\toks19
 
 (C:\Users\Cai Selvas Sala\AppData\Roaming\MiKTeX\tex/latex/geometry\geometry.cf
 g)) (C:\Program Files\MiKTeX\tex/generic/babel\babel.sty
 Package: babel 2023/02/13 3.86 The Babel package
-\babel@savecnt=\count274
-\U@D=\dimen155
+\babel@savecnt=\count278
+\U@D=\dimen163
 \l@unhyphenated=\language79
 
 (C:\Program Files\MiKTeX\tex/generic/babel\txtbabel.def)
 \bbl@readstream=\read2
-\bbl@dirlevel=\count275
+\bbl@dirlevel=\count279
 
 *************************************
 * Local config file bblopts.cfg used
@@ -269,15 +296,15 @@ Language: catalan 2005/03/29 v2.2p Catalan support from the babel system
 Package babel Info: Making " an active character on input line 91.
 Warning: You are using encoding OT1 instead of T1.
 Some word breaks will not be found.
-\leftllkern=\dimen156
-\rightllkern=\dimen157
-\raiselldim=\dimen158
+\leftllkern=\dimen164
+\rightllkern=\dimen165
+\raiselldim=\dimen166
 )) (C:\Program Files\MiKTeX\tex/generic/babel/locale/ca\babel-catalan.tex
 Package babel Info: Importing font and identification data for catalan
 (babel)             from babel-ca.ini. Reported on input line 11.
 ) (C:\Program Files\MiKTeX\tex/latex/l3backend\l3backend-pdftex.def
 File: l3backend-pdftex.def 2023-01-16 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count276
+\l__color_backend_stack_int=\count280
 \l__pdf_internal_box=\box53
 )
 (C:\Users\Cai Selvas Sala\GIA_UPC\2nC\1rQ\IAA\Practica\informe\build\main.aux
@@ -307,36 +334,36 @@ x)
 s.aux))
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
  (C:\Program Files\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count277
-\scratchdimen=\dimen159
+\scratchcounter=\count281
+\scratchdimen=\dimen167
 \scratchbox=\box54
-\nofMPsegments=\count278
-\nofMParguments=\count279
+\nofMPsegments=\count282
+\nofMParguments=\count283
 \everyMPshowfont=\toks20
-\MPscratchCnt=\count280
-\MPscratchDim=\dimen160
-\MPnumerator=\count281
-\makeMPintoPDFobject=\count282
+\MPscratchCnt=\count284
+\MPscratchDim=\dimen168
+\MPnumerator=\count285
+\makeMPintoPDFobject=\count286
 \everyMPtoPDFconversion=\toks21
 ) (C:\Program Files\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
@@ -354,7 +381,11 @@ G,.JBIG2,.JB2,.eps]
 (C:\Program Files\MiKTeX\tex/latex/00miktex\epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
-Package hyperref Info: Link coloring OFF on input line 20.
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: float package is loaded.
+Package caption Info: hyperref package is loaded.
+Package caption Info: End \AtBeginDocument code.
+Package hyperref Info: Link coloring OFF on input line 21.
 
 (C:\Users\Cai Selvas Sala\GIA_UPC\2nC\1rQ\IAA\Practica\informe\build\main.out)
 (C:\Users\Cai Selvas Sala\GIA_UPC\2nC\1rQ\IAA\Practica\informe\build\main.out)
@@ -396,8 +427,8 @@ Package hyperref Info: Link coloring OFF on input line 20.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-LaTeX Info: Redefining \l on input line 20.
-LaTeX Info: Redefining \L on input line 20.
+LaTeX Info: Redefining \l on input line 21.
+LaTeX Info: Redefining \L on input line 21.
 \openout2 = `cover.aux'.
 
 (cover.tex
@@ -407,16 +438,16 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <8> on input line 9.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 9.
-<Logos UPC/Logo UPC.png, id=195, 1204.5pt x 1204.5pt>
+<Logos UPC/Logo UPC.png, id=199, 1204.5pt x 1204.5pt>
 File: Logos UPC/Logo UPC.png Graphic file (type png)
 <use Logos UPC/Logo UPC.png>
 Package pdftex.def Info: Logos UPC/Logo UPC.png  used on input line 12.
-(pdftex.def)             Requested size: 204.76228pt x 204.76228pt.
-<Logos UPC/Logo FIB.png, id=197, 1284.8pt x 917.4275pt>
+(pdftex.def)             Requested size: 180.6672pt x 180.6672pt.
+<Logos UPC/Logo FIB.png, id=201, 1284.8pt x 917.4275pt>
 File: Logos UPC/Logo FIB.png Graphic file (type png)
 <use Logos UPC/Logo FIB.png>
 Package pdftex.def Info: Logos UPC/Logo FIB.png  used on input line 13.
-(pdftex.def)             Requested size: 167.02986pt x 119.26976pt.
+(pdftex.def)             Requested size: 154.16934pt x 110.08655pt.
  [1
 
 
@@ -430,12 +461,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 2--3
  []
 
 )
-<Logos UPC/Logo UPC BCNTech Negre Transparent.png, id=209, 569.12625pt x 170.63
+<Logos UPC/Logo UPC BCNTech Negre Transparent.png, id=213, 569.12625pt x 170.63
 75pt>
 File: Logos UPC/Logo UPC BCNTech Negre Transparent.png Graphic file (type png)
 <use Logos UPC/Logo UPC BCNTech Negre Transparent.png>
 Package pdftex.def Info: Logos UPC/Logo UPC BCNTech Negre Transparent.png  used
- on input line 31.
+ on input line 32.
 (pdftex.def)             Requested size: 142.2812pt x 42.65926pt.
  [2
 
@@ -469,7 +500,7 @@ Package pdftex.def Info: Logos UPC/Logo UPC BCNTech Negre Transparent.png  used
 File: Logos UPC/Logo UPC BCNTech Negre Transparent.png Graphic file (type png)
 <use Logos UPC/Logo UPC BCNTech Negre Transparent.png>
 Package pdftex.def Info: Logos UPC/Logo UPC BCNTech Negre Transparent.png  used
- on input line 35.
+ on input line 36.
 (pdftex.def)             Requested size: 142.2812pt x 42.65926pt.
  [5]
 \openout2 = `introduction.aux'.
@@ -478,7 +509,7 @@ Package pdftex.def Info: Logos UPC/Logo UPC BCNTech Negre Transparent.png  used
 File: Logos UPC/Logo UPC BCNTech Negre Transparent.png Graphic file (type png)
 <use Logos UPC/Logo UPC BCNTech Negre Transparent.png>
 Package pdftex.def Info: Logos UPC/Logo UPC BCNTech Negre Transparent.png  used
- on input line 35.
+ on input line 36.
 (pdftex.def)             Requested size: 142.2812pt x 42.65926pt.
  [6
 
@@ -489,7 +520,7 @@ Package pdftex.def Info: Logos UPC/Logo UPC BCNTech Negre Transparent.png  used
 File: Logos UPC/Logo UPC BCNTech Negre Transparent.png Graphic file (type png)
 <use Logos UPC/Logo UPC BCNTech Negre Transparent.png>
 Package pdftex.def Info: Logos UPC/Logo UPC BCNTech Negre Transparent.png  used
- on input line 37.
+ on input line 38.
 (pdftex.def)             Requested size: 142.2812pt x 42.65926pt.
  [7
 
@@ -503,160 +534,305 @@ Package pdftex.def Info: Logos UPC/Logo UPC BCNTech Negre Transparent.png  used
 File: Logos UPC/Logo UPC BCNTech Negre Transparent.png Graphic file (type png)
 <use Logos UPC/Logo UPC BCNTech Negre Transparent.png>
 Package pdftex.def Info: Logos UPC/Logo UPC BCNTech Negre Transparent.png  used
- on input line 45.
+ on input line 43.
 (pdftex.def)             Requested size: 142.2812pt x 42.65926pt.
  [8
 
 
 
 ]
-Overfull \hbox (1.8385pt too wide) in paragraph at lines 52--66
+Overfull \hbox (1.8385pt too wide) in paragraph at lines 50--64
  [][] 
  []
 
-<img/num-histograms-1.png, id=305, 859.71187pt x 1038.88126pt>
+<img/num-histograms-1.png, id=310, 859.71187pt x 1038.88126pt>
 File: img/num-histograms-1.png Graphic file (type png)
 <use img/num-histograms-1.png>
-Package pdftex.def Info: img/num-histograms-1.png  used on input line 96.
+Package pdftex.def Info: img/num-histograms-1.png  used on input line 94.
 (pdftex.def)             Requested size: 429.3521pt x 518.83698pt.
-<img/num-histograms-2.png, id=306, 861.2175pt x 1033.61156pt>
+<img/num-histograms-2.png, id=311, 861.2175pt x 1033.61156pt>
 File: img/num-histograms-2.png Graphic file (type png)
 <use img/num-histograms-2.png>
-Package pdftex.def Info: img/num-histograms-2.png  used on input line 102.
+Package pdftex.def Info: img/num-histograms-2.png  used on input line 100.
 (pdftex.def)             Requested size: 429.3521pt x 515.30621pt.
 File: Logos UPC/Logo UPC BCNTech Negre Transparent.png Graphic file (type png)
 <use Logos UPC/Logo UPC BCNTech Negre Transparent.png>
 Package pdftex.def Info: Logos UPC/Logo UPC BCNTech Negre Transparent.png  used
- on input line 105.
+ on input line 103.
 (pdftex.def)             Requested size: 142.2812pt x 42.65926pt.
-[9
-pdfTeX warning (ext4): destination with the same identifier (name{table.1}) has
- been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.105 \end{figure}
-                  
-pdfTeX warning (ext4): destination with the same identifier (name{table.2}) has
- been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.105 \end{figure}
-                  ]
+[9]
+File: Logos UPC/Logo UPC BCNTech Negre Transparent.png Graphic file (type png)
+<use Logos UPC/Logo UPC BCNTech Negre Transparent.png>
+Package pdftex.def Info: Logos UPC/Logo UPC BCNTech Negre Transparent.png  used
+ on input line 104.
+(pdftex.def)             Requested size: 142.2812pt x 42.65926pt.
+ [10 <./img/num-histograms-1.png>]
 File: Logos UPC/Logo UPC BCNTech Negre Transparent.png Graphic file (type png)
 <use Logos UPC/Logo UPC BCNTech Negre Transparent.png>
 Package pdftex.def Info: Logos UPC/Logo UPC BCNTech Negre Transparent.png  used
  on input line 106.
 (pdftex.def)             Requested size: 142.2812pt x 42.65926pt.
- [10
-pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) ha
-s been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.106 
-       <./img/num-histograms-1.png>]
-File: Logos UPC/Logo UPC BCNTech Negre Transparent.png Graphic file (type png)
-<use Logos UPC/Logo UPC BCNTech Negre Transparent.png>
-Package pdftex.def Info: Logos UPC/Logo UPC BCNTech Negre Transparent.png  used
- on input line 124.
-(pdftex.def)             Requested size: 142.2812pt x 42.65926pt.
- [11
-pdfTeX warning (ext4): destination with the same identifier (name{figure.2}) ha
-s been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.124 \end{table}
-                  <./img/num-histograms-2.png>]
-<img/cat-countplots-1.png, id=328, 1233.10687pt x 947.79094pt>
+ [11 <./img/num-histograms-2.png>]
+Overfull \hbox (10.43123pt too wide) in paragraph at lines 114--124
+ [][] 
+ []
+
+<img/cat-countplots-1.png, id=333, 682.04813pt x 505.13719pt>
 File: img/cat-countplots-1.png Graphic file (type png)
 <use img/cat-countplots-1.png>
-Package pdftex.def Info: img/cat-countplots-1.png  used on input line 130.
-(pdftex.def)             Requested size: 429.3521pt x 330.0108pt.
-<img/cat-countplots-2.png, id=329, 1233.10687pt x 959.08313pt>
+Package pdftex.def Info: img/cat-countplots-1.png  used on input line 132.
+(pdftex.def)             Requested size: 429.3521pt x 317.99146pt.
+<img/cat-countplots-2.png, id=334, 680.5425pt x 548.80031pt>
 File: img/cat-countplots-2.png Graphic file (type png)
 <use img/cat-countplots-2.png>
-Package pdftex.def Info: img/cat-countplots-2.png  used on input line 136.
-(pdftex.def)             Requested size: 429.3521pt x 333.94263pt.
+Package pdftex.def Info: img/cat-countplots-2.png  used on input line 138.
+(pdftex.def)             Requested size: 429.3521pt x 346.24008pt.
 File: Logos UPC/Logo UPC BCNTech Negre Transparent.png Graphic file (type png)
 <use Logos UPC/Logo UPC BCNTech Negre Transparent.png>
 Package pdftex.def Info: Logos UPC/Logo UPC BCNTech Negre Transparent.png  used
- on input line 139.
+ on input line 141.
 (pdftex.def)             Requested size: 142.2812pt x 42.65926pt.
- [12
-pdfTeX warning (ext4): destination with the same identifier (name{table.3}) has
- been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.139 \end{figure}
-                  ]
+[12]
 File: Logos UPC/Logo UPC BCNTech Negre Transparent.png Graphic file (type png)
 <use Logos UPC/Logo UPC BCNTech Negre Transparent.png>
 Package pdftex.def Info: Logos UPC/Logo UPC BCNTech Negre Transparent.png  used
- on input line 140.
+ on input line 142.
 (pdftex.def)             Requested size: 142.2812pt x 42.65926pt.
- [13
-pdfTeX warning (ext4): destination with the same identifier (name{figure.3}) ha
-s been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.140 
-       <./img/cat-countplots-1.png>])
+ [13 <./img/cat-countplots-1.png>]
 File: Logos UPC/Logo UPC BCNTech Negre Transparent.png Graphic file (type png)
 <use Logos UPC/Logo UPC BCNTech Negre Transparent.png>
 Package pdftex.def Info: Logos UPC/Logo UPC BCNTech Negre Transparent.png  used
- on input line 39.
+ on input line 149.
 (pdftex.def)             Requested size: 142.2812pt x 42.65926pt.
- [14
-pdfTeX warning (ext4): destination with the same identifier (name{figure.4}) ha
-s been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.39 \include{analisis_i_preprocessing}
-                                        <./img/cat-countplots-2.png>]
+ [14 <./img/cat-countplots-2.png>]
+<img/iqr_factors.png, id=362, 610.6815pt x 396.0396pt>
+File: img/iqr_factors.png Graphic file (type png)
+<use img/iqr_factors.png>
+Package pdftex.def Info: img/iqr_factors.png  used on input line 152.
+(pdftex.def)             Requested size: 364.95189pt x 236.68286pt.
+<img/outliers_Alk_Phos.png, id=365, 572.3784pt x 442.2924pt>
+File: img/outliers_Alk_Phos.png Graphic file (type png)
+<use img/outliers_Alk_Phos.png>
+Package pdftex.def Info: img/outliers_Alk_Phos.png  used on input line 164.
+(pdftex.def)             Requested size: 203.94157pt x 157.58517pt.
+<img/outliers_Bilirubin.png, id=366, 570.933pt x 442.2924pt>
+File: img/outliers_Bilirubin.png Graphic file (type png)
+<use img/outliers_Bilirubin.png>
+Package pdftex.def Info: img/outliers_Bilirubin.png  used on input line 169.
+(pdftex.def)             Requested size: 203.94157pt x 157.9901pt.
+<img/outliers_Cholesterol.png, id=367, 578.16pt x 442.2924pt>
+File: img/outliers_Cholesterol.png Graphic file (type png)
+<use img/outliers_Cholesterol.png>
+Package pdftex.def Info: img/outliers_Cholesterol.png  used on input line 174.
+(pdftex.def)             Requested size: 203.94157pt x 156.0127pt.
+<img/outliers_Copper.png, id=368, 569.4876pt x 442.2924pt>
+File: img/outliers_Copper.png Graphic file (type png)
+<use img/outliers_Copper.png>
+Package pdftex.def Info: img/outliers_Copper.png  used on input line 179.
+(pdftex.def)             Requested size: 203.94157pt x 158.38829pt.
+File: Logos UPC/Logo UPC BCNTech Negre Transparent.png Graphic file (type png)
+<use Logos UPC/Logo UPC BCNTech Negre Transparent.png>
+Package pdftex.def Info: Logos UPC/Logo UPC BCNTech Negre Transparent.png  used
+ on input line 186.
+(pdftex.def)             Requested size: 142.2812pt x 42.65926pt.
+
+[15 <./img/iqr_factors.png>]
+<img/outliers_Platelets.png, id=377, 570.933pt x 442.2924pt>
+File: img/outliers_Platelets.png Graphic file (type png)
+<use img/outliers_Platelets.png>
+Package pdftex.def Info: img/outliers_Platelets.png  used on input line 192.
+(pdftex.def)             Requested size: 203.94157pt x 157.9901pt.
+<img/outliers_Prothrombin.png, id=378, 578.16pt x 442.2924pt>
+File: img/outliers_Prothrombin.png Graphic file (type png)
+<use img/outliers_Prothrombin.png>
+Package pdftex.def Info: img/outliers_Prothrombin.png  used on input line 197.
+(pdftex.def)             Requested size: 203.94157pt x 156.0127pt.
+<img/outliers_SGOT.png, id=379, 577.4373pt x 442.2924pt>
+File: img/outliers_SGOT.png Graphic file (type png)
+<use img/outliers_SGOT.png>
+Package pdftex.def Info: img/outliers_SGOT.png  used on input line 202.
+(pdftex.def)             Requested size: 203.94157pt x 156.2084pt.
+<img/outliers_Tryglicerides.png, id=380, 579.6054pt x 442.2924pt>
+File: img/outliers_Tryglicerides.png Graphic file (type png)
+<use img/outliers_Tryglicerides.png>
+Package pdftex.def Info: img/outliers_Tryglicerides.png  used on input line 207
+.
+(pdftex.def)             Requested size: 203.94157pt x 155.628pt.
+File: Logos UPC/Logo UPC BCNTech Negre Transparent.png Graphic file (type png)
+<use Logos UPC/Logo UPC BCNTech Negre Transparent.png>
+Package pdftex.def Info: Logos UPC/Logo UPC BCNTech Negre Transparent.png  used
+ on input line 214.
+(pdftex.def)             Requested size: 142.2812pt x 42.65926pt.
+ [16 <./img/outliers_Alk_Phos.png> <./img/outliers_Bilirubin.png> <./img/outlie
+rs_Cholesterol.png> <./img/outliers_Copper.png>]
+File: Logos UPC/Logo UPC BCNTech Negre Transparent.png Graphic file (type png)
+<use Logos UPC/Logo UPC BCNTech Negre Transparent.png>
+Package pdftex.def Info: Logos UPC/Logo UPC BCNTech Negre Transparent.png  used
+ on input line 218.
+(pdftex.def)             Requested size: 142.2812pt x 42.65926pt.
+
+[17 <./img/outliers_Platelets.png> <./img/outliers_Prothrombin.png> <./img/outl
+iers_SGOT.png> <./img/outliers_Tryglicerides.png>]
+File: Logos UPC/Logo UPC BCNTech Negre Transparent.png Graphic file (type png)
+<use Logos UPC/Logo UPC BCNTech Negre Transparent.png>
+Package pdftex.def Info: Logos UPC/Logo UPC BCNTech Negre Transparent.png  used
+ on input line 254.
+(pdftex.def)             Requested size: 142.2812pt x 42.65926pt.
+ [18]
+File: Logos UPC/Logo UPC BCNTech Negre Transparent.png Graphic file (type png)
+<use Logos UPC/Logo UPC BCNTech Negre Transparent.png>
+Package pdftex.def Info: Logos UPC/Logo UPC BCNTech Negre Transparent.png  used
+ on input line 272.
+(pdftex.def)             Requested size: 142.2812pt x 42.65926pt.
+ [19]
+File: Logos UPC/Logo UPC BCNTech Negre Transparent.png Graphic file (type png)
+<use Logos UPC/Logo UPC BCNTech Negre Transparent.png>
+Package pdftex.def Info: Logos UPC/Logo UPC BCNTech Negre Transparent.png  used
+ on input line 290.
+(pdftex.def)             Requested size: 142.2812pt x 42.65926pt.
+ [20])
+File: Logos UPC/Logo UPC BCNTech Negre Transparent.png Graphic file (type png)
+<use Logos UPC/Logo UPC BCNTech Negre Transparent.png>
+Package pdftex.def Info: Logos UPC/Logo UPC BCNTech Negre Transparent.png  used
+ on input line 40.
+(pdftex.def)             Requested size: 142.2812pt x 42.65926pt.
+ [21]
 \openout2 = `preparacio_variables.aux'.
 
 
-(preparacio_variables.tex)
+(preparacio_variables.tex
+File: Logos UPC/Logo UPC BCNTech Negre Transparent.png Graphic file (type png)
+<use Logos UPC/Logo UPC BCNTech Negre Transparent.png>
+Package pdftex.def Info: Logos UPC/Logo UPC BCNTech Negre Transparent.png  used
+ on input line 22.
+(pdftex.def)             Requested size: 142.2812pt x 42.65926pt.
+ [22
+
+
+
+]
+<img/num-corr.png, id=423, 674.2791pt x 426.393pt>
+File: img/num-corr.png Graphic file (type png)
+<use img/num-corr.png>
+Package pdftex.def Info: img/num-corr.png  used on input line 30.
+(pdftex.def)             Requested size: 386.41426pt x 244.36078pt.
 File: Logos UPC/Logo UPC BCNTech Negre Transparent.png Graphic file (type png)
 <use Logos UPC/Logo UPC BCNTech Negre Transparent.png>
 Package pdftex.def Info: Logos UPC/Logo UPC BCNTech Negre Transparent.png  used
  on input line 41.
 (pdftex.def)             Requested size: 142.2812pt x 42.65926pt.
- [15
+ [23 <./img/num-corr.png>]
+File: Logos UPC/Logo UPC BCNTech Negre Transparent.png Graphic file (type png)
+<use Logos UPC/Logo UPC BCNTech Negre Transparent.png>
+Package pdftex.def Info: Logos UPC/Logo UPC BCNTech Negre Transparent.png  used
+ on input line 63.
+(pdftex.def)             Requested size: 142.2812pt x 42.65926pt.
+ [24]
+<img/corr_Ascites_vs_status.png, id=439, 714.7503pt x 281.853pt>
+File: img/corr_Ascites_vs_status.png Graphic file (type png)
+<use img/corr_Ascites_vs_status.png>
+Package pdftex.def Info: img/corr_Ascites_vs_status.png  used on input line 67.
 
+(pdftex.def)             Requested size: 214.67604pt x 84.65546pt.
+<img/corr_Drug_vs_status.png, id=440, 714.7503pt x 281.853pt>
+File: img/corr_Drug_vs_status.png Graphic file (type png)
+<use img/corr_Drug_vs_status.png>
+Package pdftex.def Info: img/corr_Drug_vs_status.png  used on input line 72.
+(pdftex.def)             Requested size: 214.67604pt x 84.65546pt.
+<img/corr_Edema_vs_status.png, id=441, 714.7503pt x 281.853pt>
+File: img/corr_Edema_vs_status.png Graphic file (type png)
+<use img/corr_Edema_vs_status.png>
+Package pdftex.def Info: img/corr_Edema_vs_status.png  used on input line 77.
+(pdftex.def)             Requested size: 214.67604pt x 84.65546pt.
+<img/corr_Hepatomegaly_vs_status.png, id=442, 714.7503pt x 281.853pt>
+File: img/corr_Hepatomegaly_vs_status.png Graphic file (type png)
+<use img/corr_Hepatomegaly_vs_status.png>
+Package pdftex.def Info: img/corr_Hepatomegaly_vs_status.png  used on input lin
+e 82.
+(pdftex.def)             Requested size: 214.67604pt x 84.65546pt.
+<img/corr_Sex_vs_status.png, id=443, 714.7503pt x 281.853pt>
+File: img/corr_Sex_vs_status.png Graphic file (type png)
+<use img/corr_Sex_vs_status.png>
+Package pdftex.def Info: img/corr_Sex_vs_status.png  used on input line 93.
+(pdftex.def)             Requested size: 214.67604pt x 84.65546pt.
+<img/corr_Spiders_vs_status.png, id=444, 714.7503pt x 281.853pt>
+File: img/corr_Spiders_vs_status.png Graphic file (type png)
+<use img/corr_Spiders_vs_status.png>
+Package pdftex.def Info: img/corr_Spiders_vs_status.png  used on input line 98.
 
+(pdftex.def)             Requested size: 214.67604pt x 84.65546pt.
+<img/corr_Stage_vs_status.png, id=445, 714.7503pt x 281.853pt>
+File: img/corr_Stage_vs_status.png Graphic file (type png)
+<use img/corr_Stage_vs_status.png>
+Package pdftex.def Info: img/corr_Stage_vs_status.png  used on input line 103.
+(pdftex.def)             Requested size: 214.67604pt x 84.65546pt.
+<img/corr_Status_vs_status.png, id=446, 714.7503pt x 281.853pt>
+File: img/corr_Status_vs_status.png Graphic file (type png)
+<use img/corr_Status_vs_status.png>
+Package pdftex.def Info: img/corr_Status_vs_status.png  used on input line 108.
 
-]
+(pdftex.def)             Requested size: 214.67604pt x 84.65546pt.
+File: Logos UPC/Logo UPC BCNTech Negre Transparent.png Graphic file (type png)
+<use Logos UPC/Logo UPC BCNTech Negre Transparent.png>
+Package pdftex.def Info: Logos UPC/Logo UPC BCNTech Negre Transparent.png  used
+ on input line 115.
+(pdftex.def)             Requested size: 142.2812pt x 42.65926pt.
+ [25 <./img/corr_Ascites_vs_status.png> <./img/corr_Drug_vs_status.png> <./img/
+corr_Edema_vs_status.png> <./img/corr_Hepatomegaly_vs_status.png>]
+File: Logos UPC/Logo UPC BCNTech Negre Transparent.png Graphic file (type png)
+<use Logos UPC/Logo UPC BCNTech Negre Transparent.png>
+Package pdftex.def Info: Logos UPC/Logo UPC BCNTech Negre Transparent.png  used
+ on input line 129.
+(pdftex.def)             Requested size: 142.2812pt x 42.65926pt.
+ [26 <./img/corr_Sex_vs_status.png> <./img/corr_Spiders_vs_status.png> <./img/c
+orr_Stage_vs_status.png> <./img/corr_Status_vs_status.png>])
+File: Logos UPC/Logo UPC BCNTech Negre Transparent.png Graphic file (type png)
+<use Logos UPC/Logo UPC BCNTech Negre Transparent.png>
+Package pdftex.def Info: Logos UPC/Logo UPC BCNTech Negre Transparent.png  used
+ on input line 42.
+(pdftex.def)             Requested size: 142.2812pt x 42.65926pt.
+ [27]
 \openout2 = `definicio_models.aux'.
 
- (definicio_models.tex)
+ (definicio_models.tex
 File: Logos UPC/Logo UPC BCNTech Negre Transparent.png Graphic file (type png)
 <use Logos UPC/Logo UPC BCNTech Negre Transparent.png>
 Package pdftex.def Info: Logos UPC/Logo UPC BCNTech Negre Transparent.png  used
- on input line 43.
+ on input line 17.
 (pdftex.def)             Requested size: 142.2812pt x 42.65926pt.
- [16
+ [28
 
 
 
 ]
-Overfull \vbox (0.15239pt too high) has occurred while \output is active []
-
 File: Logos UPC/Logo UPC BCNTech Negre Transparent.png Graphic file (type png)
 <use Logos UPC/Logo UPC BCNTech Negre Transparent.png>
 Package pdftex.def Info: Logos UPC/Logo UPC BCNTech Negre Transparent.png  used
  on input line 43.
 (pdftex.def)             Requested size: 142.2812pt x 42.65926pt.
+ [29])
+File: Logos UPC/Logo UPC BCNTech Negre Transparent.png Graphic file (type png)
+<use Logos UPC/Logo UPC BCNTech Negre Transparent.png>
+Package pdftex.def Info: Logos UPC/Logo UPC BCNTech Negre Transparent.png  used
+ on input line 44.
+(pdftex.def)             Requested size: 142.2812pt x 42.65926pt.
+ [30]
+File: Logos UPC/Logo UPC BCNTech Negre Transparent.png Graphic file (type png)
+<use Logos UPC/Logo UPC BCNTech Negre Transparent.png>
+Package pdftex.def Info: Logos UPC/Logo UPC BCNTech Negre Transparent.png  used
+ on input line 44.
+(pdftex.def)             Requested size: 142.2812pt x 42.65926pt.
 
-[17]
+[31]
 \openout2 = `seleccio_model.aux'.
 
  (seleccio_model.tex)
 File: Logos UPC/Logo UPC BCNTech Negre Transparent.png Graphic file (type png)
 <use Logos UPC/Logo UPC BCNTech Negre Transparent.png>
 Package pdftex.def Info: Logos UPC/Logo UPC BCNTech Negre Transparent.png  used
- on input line 45.
+ on input line 46.
 (pdftex.def)             Requested size: 142.2812pt x 42.65926pt.
- [18
+ [32
 
 
 
@@ -667,9 +843,9 @@ Package pdftex.def Info: Logos UPC/Logo UPC BCNTech Negre Transparent.png  used
 File: Logos UPC/Logo UPC BCNTech Negre Transparent.png Graphic file (type png)
 <use Logos UPC/Logo UPC BCNTech Negre Transparent.png>
 Package pdftex.def Info: Logos UPC/Logo UPC BCNTech Negre Transparent.png  used
- on input line 47.
+ on input line 48.
 (pdftex.def)             Requested size: 142.2812pt x 42.65926pt.
- [19
+ [33
 
 
 
@@ -680,9 +856,9 @@ Package pdftex.def Info: Logos UPC/Logo UPC BCNTech Negre Transparent.png  used
 File: Logos UPC/Logo UPC BCNTech Negre Transparent.png Graphic file (type png)
 <use Logos UPC/Logo UPC BCNTech Negre Transparent.png>
 Package pdftex.def Info: Logos UPC/Logo UPC BCNTech Negre Transparent.png  used
- on input line 49.
+ on input line 50.
 (pdftex.def)             Requested size: 142.2812pt x 42.65926pt.
- [20
+ [34
 
 
 
@@ -694,9 +870,9 @@ Package pdftex.def Info: Logos UPC/Logo UPC BCNTech Negre Transparent.png  used
 File: Logos UPC/Logo UPC BCNTech Negre Transparent.png Graphic file (type png)
 <use Logos UPC/Logo UPC BCNTech Negre Transparent.png>
 Package pdftex.def Info: Logos UPC/Logo UPC BCNTech Negre Transparent.png  used
- on input line 51.
+ on input line 52.
 (pdftex.def)             Requested size: 142.2812pt x 42.65926pt.
- [21
+ [35
 
 
 
@@ -707,21 +883,32 @@ Package pdftex.def Info: Logos UPC/Logo UPC BCNTech Negre Transparent.png  used
 File: Logos UPC/Logo UPC BCNTech Negre Transparent.png Graphic file (type png)
 <use Logos UPC/Logo UPC BCNTech Negre Transparent.png>
 Package pdftex.def Info: Logos UPC/Logo UPC BCNTech Negre Transparent.png  used
- on input line 53.
+ on input line 54.
 (pdftex.def)             Requested size: 142.2812pt x 42.65926pt.
- [22
+ [36
 
 
 
 ]
-(C:\Users\Cai Selvas Sala\GIA_UPC\2nC\1rQ\IAA\Practica\informe\build\main.bbl)
+(C:\Users\Cai Selvas Sala\GIA_UPC\2nC\1rQ\IAA\Practica\informe\build\main.bbl
+Underfull \hbox (badness 3989) in paragraph at lines 10--16
+[]\OT1/cmr/m/n/10 Fundaci^^Son Es-pa~nola del Coraz^^Son.  Co-les-te-rol y ri-e
+s-go car-di-o-vas-cu-lar.  []$\OT1/cmtt/m/n/10 https : / /
+ []
+
+
+Underfull \hbox (badness 2903) in paragraph at lines 10--16
+\OT1/cmtt/m/n/10 fundaciondelcorazon . com / prevencion / riesgo-[]cardiovascul
+ar / colesterol . html$[]\OT1/cmr/m/n/10 , 2023.
+ []
+
+)
 File: Logos UPC/Logo UPC BCNTech Negre Transparent.png Graphic file (type png)
 <use Logos UPC/Logo UPC BCNTech Negre Transparent.png>
 Package pdftex.def Info: Logos UPC/Logo UPC BCNTech Negre Transparent.png  used
  on input line 59.
 (pdftex.def)             Requested size: 142.2812pt x 42.65926pt.
-
-[23
+ [37
 
 
 ]
@@ -751,16 +938,16 @@ x)
 (C:\Users\Cai Selvas Sala\GIA_UPC\2nC\1rQ\IAA\Practica\informe\build\conclusion
 s.aux))
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 273076CC720A7EE8606CFEC4B2D01CFC;8385.
+(rerunfilecheck)             Checksum: F9EF599FA8B441790C358365EA3224D0;8554.
  ) 
 Here is how much of TeX's memory you used:
- 10592 strings out of 476334
- 181165 string characters out of 5797754
+ 12199 strings out of 476334
+ 214004 string characters out of 5797754
  1866382 words of memory out of 5000000
- 30718 multiletter control sequences out of 15000+600000
+ 32276 multiletter control sequences out of 15000+600000
  519621 words of font info for 56 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,17n,76p,692b,566s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,17n,77p,957b,585s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\Cai Selvas Sala\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/d
 pi600\tcrm1000.pk> <C:\Users\Cai Selvas Sala\AppData\Local\MiKTeX\fonts/pk/ljfo
 ur/jknappen/ec/dpi600\tcrm0900.pk> <C:\Users\Cai Selvas Sala\AppData\Local\MiKT
@@ -769,16 +956,17 @@ pData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1728.pk><C:/Program F
 iles/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Program Files/MiKTeX/
 fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Files/MiKTeX/fonts/type1/
 public/amsfonts/cm/cmbx9.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfon
-ts/cm/cmr10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.p
-fb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Progra
-m Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Program Files/MiKTeX
-/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX/fonts/type1
-/public/amsfonts/cm/cmti10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsf
-onts/cm/cmtt10.pfb>
+ts/cm/cmmi10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.
+pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Progr
+am Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Files/MiKT
+eX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Files/MiKTeX/fonts/type1
+/public/amsfonts/cm/cmr9.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfon
+ts/cm/cmsy10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10
+.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
 Output written on "C:\Users\Cai Selvas Sala\GIA_UPC\2nC\1rQ\IAA\Practica\inform
-e\build\main.pdf" (23 pages, 1084740 bytes).
+e\build\main.pdf" (37 pages, 1611594 bytes).
 PDF statistics:
- 465 PDF objects out of 1000 (max. 8388607)
- 81 named destinations out of 1000 (max. 500000)
- 420 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 607 PDF objects out of 1000 (max. 8388607)
+ 104 named destinations out of 1000 (max. 500000)
+ 518 words of extra memory for PDF output out of 10000 (max. 10000000)
 

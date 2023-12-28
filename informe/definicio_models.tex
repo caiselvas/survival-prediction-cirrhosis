@@ -1,14 +1,39 @@
 \section{Definició de models}
+Per la predicció de la variable objectiu (\textit{Status}) s'han realitzat 3 tipus diferents de models: un K-Nearest Neighbors (KNN), un Arbre de Decisió (Decision Tree) i un Support Vector Machine (SVM). 
+
+En primer lloc, cal mencionar que tots aquests models treballen amb dades numèriques, de manera que requereixen que les dades categòriques hagin estat codificades. No obstant, en la implementació que s'ha fet, es contempla el cas en què les variables categòriques no han estat codificades i llavors el model prediu només amb les variables categòriques. Això ens permet poder fer proves amb i sense codificar les dades, ja que en certs models i datasets potser s'obté millor rendiment obviant les variables numèriques en la predicció.
+
+Per cada un dels models, es definiran uns paràmetres generals fixes (els que generalment venen per defecte en els predictors de \texttt{scikit-learn}) i es provaran totes les possibles combinacions de modificacions al dataset (codificar o no, eliminar o no outliers, escalar variables o no, balancejar classes amb un mètode o amb un altre, etc.) mitjançant la funció \texttt{find\_best\_dataset()}. En cada una d'aquestes combinacions s'entrena el model i es fa la predicció, obtenint els resultats. El dataset (combinació de modificacions al dataset inicial) que aconsegueixi millors resultats (predient en el test) s'establirà com el ``millor dataset pels models d'aquell tipus''.
+
+Una vegada determinat el millor dataset per cada tipus de model, es provaran moltes combinacions de paràmetres en la funció \texttt{run\_experiment()} mitjançant cross validation en la partició de train. Els que donin millors resultats de mitjana en la validació s'utilitzaran per predir en el test i es determinarà com el ``model definitiu d'aquell tipus'' (ja que s'haurà entrenat amb un dataset específic per al model en concret i s'hauran trobat els paràmetres que rendeixen millor).
+
+Evidentment, les proves es podrien fer directament sempre al test (no a la partició de validació) i també provar una major quantitat de paràmetres i combinacions de datasets dels que es provaran. No obstant, es considera que una de les parts fonamentals d'aquest projecte consisteix en saber filtrar què pot funcionar i què no, en comptes de provar-ho tot a la força bruta. És a dir, encara que els paràmetres que s'escullin en el validation no acabin sent els millors pel test (ja que poden estar donant mètriques més altes en el validation degut a overfitting), no és una solució eficient (ni en termes de computació, ni de temps, ni de escalabilitat, etc.) provar tots aquests paràmetres en el test directament. A més, les particions de validació estan fetes precisament per ajudar a escollir paràmetres.
+
+Una vegada mencionat això, quan ja es tinguin els 3 ``models definitius'', es compararan els resultats per escollir el millor dels 3 models i procedir al seu anàlisi més exhaustiu, model card, etc.
+
+Totes aquestes proves o execucions es realitzaran amb la llavor (seed o random\_state) amb valor 42 arbitràriament per una millor reproductibilitat. És evident que s'obtindrien millors resultats realitzant l'experiment amb múltiples llavors i escollint els paràmetres que més es repetissin en les diferents execucions (per així reduir el factor aleatori), però cada una d'aquestes execucions té una durada aproximada de 20 minuts, de manera que no és viable perdre-hi tant de temps. No obstant, si s'haguessin d'implementar aquests models en un cas real, seria molt important afegir més execucions amb llavors diferents per poder tenir resultats més robustos al factor aleatori.
+
+A continuació es detallen els diferents tipus de models, els paràmetres provats, el conjunt de modificacions del dataset adient per cada un, les mètriques utilitzades, etc.
 
 \subsection{K-Nearest Neighbors (KNN)}
 
 \subsubsection{Motivació}
+El nostre dataset conté dades relacionades amb pacients amb cirrosi hepàtica, on l'objectiu principal és predir l'estat del pacient (variable \textit{Status}). L'algorisme \textit{K-Nearest Neighbors} (KNN) es presenta com una elecció adequada per aquesta tasca per diverses raons.
+
+En primer lloc, KNN és un algorisme basat en instàncies, el que significa que fa prediccions basant-se en la proximitat i similitud de les mostres en l'espai de característiques. Això és particularment útil en el nostre cas, on les característiques dels pacients com l'edat, sexe, indicadors bioquímics i la resposta al tractament poden influir directament en el seu estat de salut. La capacitat de KNN per capturar aquestes relacions espacials i fer prediccions sense la necessitat de que hi hagi patrons explícits el fa un bon candidat per conjunts de dades amb relacions complexes i no lineals entre les característiques i la variable objectiu.
+
+A més, la naturalesa intuïtiva i la facilitat d'interpretació de KNN són avantatges significatius quan es tracta de dades mèdiques. La possibilitat de explicar les prediccions en termes de "pacients semblants" (\textit{Nearest Neighbors}) pot ser molt valuosa en l'àmbit mèdic, on la comprensió i la confiança en el model són també de gran importància.
 
 \subsubsection{Mètriques}
+Per l'avaluació del model, s'ha utilitzat la mètrica de \textit{f1-score-weighted}, tal i com s'ha dit que es faria en tots els models (inclosos els de imputació explicats en apartats anteriors). Aquesta mètrica és calcula fent la mitjana harmònica entre la \textit{precision} i el \textit{recall}, penalitzant els valors extrems (calen valors bons tant de \textit{precision} com de \textit{recall} per tal de tenir un bon \textit{f1}). La mitjana de valors de totes les prediccions es fa ponderada (\textit{weighted}), de manera que a cada classe se li dona una importància proporcional a les seves aparicions. D'aquesta manera, es puntua millor que s'aconsegueixi classificar correctament la classe majoritària (on s'haurà de fer més prediccions). 
+
+Si en un altre experiment es desitgés predir donar molta importància la classe minoritària (en aquest cas ``LiverTransplant'', que no és tant rellevant en aquest estudi com ``Alive'' o ``Dead'') es podrien utilitzar altres mètriques que ho tinguessin més en consideració.
 
 \subsubsection{Hiperparàmetres}
+L'únic hiperparàmetre que s'ha modificat és la \textit{k} (\texttt{n\_neighbors} en la implementació de \texttt{scikit-learn}), que indica el nombre de veïns més propers que es consideren a l'hora de fer la predicció. Els valors que s'han provat són 1, 2, 3, 5, 10, 15, 20 ,25 i 50.
 
 \subsubsection{Entrenament}
+
 
 \subsubsection{Resultats}
 
@@ -16,7 +41,17 @@
 \subsection{Arbre de decisió}
 
 \subsubsection{Motivació}
+El nostre dataset presenta dades complexes i diverses sobre pacients amb cirrosi hepàtica, on la tasca principal és predir l'estat del pacient (``Status''). L'ús d'un arbre de decisió per a aquesta finalitat es justifica per diverses raons clau.
 
+Primerament, els arbres de decisió són models no lineals que poden capturar interaccions complexes entre les variables. Això és particularment útil en el nostre cas, ja que la condició dels pacients pot estar influenciada per una combinació de factors com ara l'edat, el sexe, els indicadors bioquímics i la història mèdica. Un arbre de decisió pot dividir l'espai de les dades en subconjunts basats en aquestes característiques, facilitant la comprensió de com aquests factors interactuen i afecten el ``Status'' del pacient.
+
+A més, els arbres de decisió són fàcilment interpretables. Els models generen estructures d'arbre que es poden visualitzar i comprendre, mostrant clarament el camí de decisió des de les característiques fins a la predicció final. Aquesta transparència és d'un gran valor en l'àmbit mèdic, on els professionals de la salut necessiten comprendre el raonament darrere les prediccions del model.
+
+Els arbres de decisió també són útils per a la gestió de dades amb valors perduts. Poden manejar dades incompletes sense necessitat de processos complexos de imputació, una característica important quan es treballa amb registres mèdics on les dades falten poden ser comunes.
+
+Finalment, aquest tipus de model pot adaptar-se a la naturalesa desequilibrada del nostre dataset. Els arbres de decisió poden ser ajustats per donar més pes a les classes minoritàries, millorant la seva capacitat per predir classes menys freqüents, una característica essencial per a la precisió en la predicció de la variable ``Status''.
+
+Per aquestes raons, hem escollit utilitzar un arbre de decisió com a eina principal per a la predicció de la variable "Status" en el nostre dataset de cirrosi hepàtica.
 \subsubsection{Mètriques}
 
 \subsubsection{Hiperparàmetres}
@@ -37,3 +72,5 @@
 \subsubsection{Entrenament}
 
 \subsubsection{Resultats}
+
+%--------------------------------------------------------------------------
