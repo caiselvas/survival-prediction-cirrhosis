@@ -151,7 +151,7 @@ Per tant, el primer eix principal es caracteritza princpalment per els valors po
 
 Pel que fa al segon eix principal, veiem que hi té projectades positivament \textit{Age} i \textit{Prothrombin}; i negativament sobretot \textit{Platelets}, però també lleugerament \textit{Cholesterol} i \textit{Albumin}. Amb la informació del segon eix, es podria dir que el valor de l'edat té una relació inversa amb el de \textit{Platelets}; és a dir, la gent més gran tendeix a tenir un valor de \textit{Platelets} més petit.
 
-Resumint, es podria dir que el primer eix principal conté sobretot característiques sobre les dades mesurades del pacient, mentre que el s
+Resumint, es podria dir que el primer eix principal conté sobretot característiques sobre les dades mesurades del pacient, mentre que el segon component ve determinat especialment per l'edat i les plaquetes (platelets) del pacient.
 
 \begin{figure}[H]
 	\centering

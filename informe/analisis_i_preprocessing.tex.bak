@@ -224,6 +224,7 @@ Aquesta partició de la base de dades es fa en la funció \texttt{split\_dataset
 Finalment, cal mencionar també que, per tenir una proporció igual de classes de la variable objectiu (\textit{Status}) en tots dos conjunts, s'ha fet el perticionat mitjançant \textit{stratify} (conserva la distribució de classes en tots dos conjunts).
 
 \subsection{Missings}
+\label{subsec:missings}
 Inicialment el dataset conté una gran quantitat de missings. En la taula \ref{tab:missings} es pot veure que hi ha un total de 12 variables que contenen valors faltants. Observant el dataset inicial proporcionat, es pot veure que des de l'individu amb \textit{ID} = 313 fins al final del dataset (l'últim individu té \textit{ID} = 418) hi ha múltiples columnes que no tenen ni un únic valor (concretament, 9 columnes).
 
 \begin{table}[H]
