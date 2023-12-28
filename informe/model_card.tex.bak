@@ -13,10 +13,15 @@
 \end{itemize}
 
 \subsection{Hiperparàmetres}
-Han estat determinats mitjançant una validació creuada amb \textit{K-Fold} ($k = 5$). En aaues
+Han estat determinats mitjançant una validació creuada amb \textit{K-Fold} ($k = 5$).
 \begin{itemize}
 	\item \textbf{Kernel}: s'ha utilitzat un kernel lineal.
-	\item \textbf{C}: s'ha utilitzat el valor $C = 5$. 
+	\item \textbf{C}: s'ha utilitzat el valor $C = 5$. No es recomana, però es pot modificar si es desitja.
+	\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.5\linewidth]{img/c_evolution.png}
+	\caption*{Evolucició de les mètriques en el test en funció del paràmetre C. \textit{Precision-weighted} i \textit{recall-weighted} es solapen en la gràfica, van junts.}
+	\end{figure}
 \end{itemize}
 
 \subsection{Dades}
@@ -73,6 +78,7 @@ El model està dissenyat per a ser utilitzat com a eina de suport a la decisió 
 \begin{itemize}
 \item Per funcionar correcatment amb dades externes, aquestes s'han de preprocessar de la mateixa manera en què el model ha estat entrenat.
 \item EL model no és totalment precís, en certs casos pot predir una classe que no és correcta, tal i com es veu en la matriu de confusió.
+\item El model pot tenir lleuger overfitting, de maner que els resultats siguin pitjors en un escenari real.
 \end{itemize}
 
 %-------------------------------------------------------------------------------------
